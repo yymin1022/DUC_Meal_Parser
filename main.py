@@ -1,6 +1,9 @@
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+# Need to change reg_week_year value by dates
+# HarenKei did not talked me to change reg_week_year value by date
+# So I hard-coded this value with 46 that shows when I wrote this code
 url303 = "http://www.daelim.ac.kr/hme/stu_service/prg/stu_cafeteria.do?reg_week_year=46&cafe_cd=139"
 
 html = urlopen(url303).read()
