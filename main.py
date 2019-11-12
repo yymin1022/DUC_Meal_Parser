@@ -10,16 +10,9 @@ table_meal = soup.find("table", class_="table_col mt_30 ml_22")
 tr_corner = table_meal.find_all("tr")
 
 for i in range(5):
-    if i == 0:
-        print("/* 월요일 */")
-    elif i == 1:
-        print("/* 화요일 */")
-    elif i == 2:
-        print("/* 수요일 */")
-    elif i == 3:
-        print("/* 목요일 */")
-    elif i == 4:
-        print("/* 금요일 */")
+    th_day = table_meal.find("thead")
+    str_day = th_day.find_all("th")[i + 2]
+    print("/*", str_day.text, "*/")
     for j in range(9):
         content = tr_corner[j + 1].find_all("td")
         if j == 0:
